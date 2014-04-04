@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            function reply(answer){
+                
+                alert(answer);
+            }
+            function send(question){
+                var q=question.inputbox.value;
+            $.post{
+                "test.php",{question: q},function(data){
+                reply(data);
+                }
+            };
+            };
+        </script>
+    </head>
+    
+    <body>
+        <FORM NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <BR>
+            <INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+            <INPUT TYPE="button" NAME="button" Value="Click" onClick="send(this.form)">
+            </FORM>
+    </body>
+
+
+
+</html>
